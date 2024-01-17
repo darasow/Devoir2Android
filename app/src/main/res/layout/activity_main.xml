@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    >
+
+    <TextView
+        android:id="@+id/titre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inscription"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"/>
+    <!-- Champ Prénom -->
+    <TextView
+        android:id="@+id/textViewPrenom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titre"
+        android:layout_marginTop="20dp"
+        android:text="Prénom:"/>
+
+    <EditText
+        android:id="@+id/editTextPrenom"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textViewPrenom"
+        android:layout_alignBaseline="@id/textViewPrenom"
+        android:layout_marginLeft="10dp"
+        android:hint="Entrez votre prénom"/>
+
+    <!-- Champ Nom -->
+    <TextView
+        android:id="@+id/textViewNom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nom:"
+        android:layout_below="@id/editTextPrenom"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"/>
+
+    <EditText
+        android:id="@+id/editTextNom"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPrenom"
+        android:layout_toRightOf="@id/textViewNom"
+        android:layout_alignBaseline="@id/textViewNom"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="20dp"
+        android:hint="Entrez votre nom"/>
+
+    <!-- Champ Genre (avec RadioButtons en colonne) -->
+    <TextView
+        android:id="@+id/textViewGenre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Genre:"
+        android:layout_below="@id/editTextNom"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupGenre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textViewGenre"
+        android:layout_below="@id/editTextNom"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButtonMasculin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Masculin" />
+
+        <RadioButton
+            android:id="@+id/radioButtonFeminin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Féminin"/>
+    </RadioGroup>
+
+
+    <!-- Champ Pays (avec Spinner) -->
+    <TextView
+        android:id="@+id/textViewPays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pays:"
+        android:layout_below="@id/radioGroupGenre"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerPays"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioGroupGenre"
+        android:layout_toRightOf="@id/textViewPays"
+        android:layout_marginTop="15dp"
+        android:entries="@array/pays"/>
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/errors"
+           android:visibility="invisible"
+           android:layout_centerHorizontal="true"
+           android:layout_below="@id/spinnerPays"
+           android:textAlignment="center"
+           android:background="@color/red"
+           android:textSize="20sp"
+           android:padding="15dp"
+           android:textStyle="bold"
+           android:layout_marginTop="15dp">
+       </TextView>
+    <!-- Bouton Inscription -->
+    <Button
+        android:id="@+id/buttonInscription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inscription"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="32dp"/>
+</RelativeLayout>

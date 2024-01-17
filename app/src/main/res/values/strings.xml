@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Devoir2Androide</string>
+    <string-array name="pays">
+        <item>Guinée</item>
+        <item>Mali</item>
+        <item>Sénegal</item>
+    </string-array>
+</resources>

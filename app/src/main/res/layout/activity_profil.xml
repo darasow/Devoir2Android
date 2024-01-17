@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".profil">
+   <!--Profil-->
+    <TextView
+        android:id="@+id/profil"
+        android:layout_width="wrap_content"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_500"
+        android:text="Votre Profil"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        tools:ignore="MissingConstraints">
+    </TextView>
+
+<!--labelNom  -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profil"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        android:id="@+id/labelNom"
+        android:text="Nom : "
+        android:textSize="25sp">
+    </TextView>
+<!--valuNom-->
+    <TextView
+        android:id="@+id/valuNom"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/labelNom"
+        android:layout_alignBaseline="@id/labelNom"
+        android:layout_marginLeft="60dp"
+        android:textSize="25sp"
+        tools:ignore="Sow"
+        android:text="NomV">
+    </TextView>
+
+<!-- labelPrenom-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/labelPrenom"
+        android:textSize="25sp"
+        android:layout_below="@id/valuNom"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="40dp"
+        android:text="Prenom : ">
+    </TextView>
+<!-- valuPrenom-->
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labelPrenom"
+        android:layout_toRightOf="@id/labelPrenom"
+        android:layout_alignBaseline="@id/labelPrenom"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="23dp"
+        android:id="@+id/valuPrenom"
+        android:textSize="25sp"
+        android:maxLines="2"
+        android:text="PrenomV">
+    </TextView>
+
+<!--labelGenre-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labelPrenom"
+        android:layout_marginTop="16dp"
+        android:id="@+id/labelGenre"
+        android:textSize="25sp"
+        android:layout_marginLeft="40dp"
+        android:text="Genre : ">
+    </TextView>
+<!--valuGenre-->
+    <TextView
+        android:id="@+id/valuGenre"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/labelGenre"
+        android:layout_alignBaseline="@id/labelGenre"
+        android:layout_marginLeft="45dp"
+        android:textSize="25sp"
+        tools:ignore="Masculin"
+        android:text="GenreV">
+    </TextView>
+
+<!--labelPays-->
+    <TextView
+        android:id="@+id/labelPays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labelGenre"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="40dp"
+        android:textSize="25sp"
+        android:text="Pays : ">
+    </TextView>
+<!--valuPays-->
+    <TextView
+        android:id="@+id/valuPays"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/labelPays"
+        android:layout_alignBaseline="@id/labelPays"
+        android:layout_marginLeft="60dp"
+        android:textSize="25sp"
+        android:text="PaysV"
+       >
+    </TextView>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:id="@+id/deconnexion"
+        android:text="Déconnexion"
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="32dp"
+        android:layout_height="wrap_content">
+    </Button>
+
+
+</RelativeLayout>
